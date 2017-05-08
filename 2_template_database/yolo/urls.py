@@ -4,4 +4,5 @@ from yolo import views
 urlpatterns =[
     url(r'^$',views.index,name='index'),
     url(r'^image',views.image,name='image'),
+    url(r'^accessrecord',views.accessrecord,name='record'),
 ]
