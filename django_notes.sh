@@ -9,32 +9,16 @@ python manage.py startapp restapi_yolo
 ## got to main/settings.py, add 'restapi_yolo' into installed app list
 
 
-## in restapi_yolo/views.py add follow to create an index page
-from django.http import HttpResponse
-# Create your views here.
-def index(request):
-    return HttpResponse('Hello World!')
-    
-## make following changes in main/urls.py
-from django.conf.urls import include
-from restapi_yolo import views
-urlpatterns = [
-    url(r'^$',views.index,name ='index'),
-    url(r'^restapi_yolo/',include('restapi_yolo.urls')),
-    url(r'^admin/', admin.site.urls),
-]
+## after create model run migrate 
+python manage.py migrate 
+python manage.py makemigrations yolo
+python manage.py migrate     ## do it one more time 
 
+## create super for admin 
+python manage.py createsuperuser
+	## user name : chengyu
+	## password : JOHNSONice16
+	## email: huangchengyu16@gmail.com
 
-## create url.py in restapi_yolo folder 
-from django.conf.urls import url
-from restapi_yolo import views
-
-urlpatterns =[
-    url(r'^$',views.index,name='index')
-]
-
-
-
-
-
-
+## now you can go to admin page 
+## http://127.0.0.1:8000/admin
