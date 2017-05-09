@@ -20,10 +20,3 @@ class AccessRecord(models.Model):
     
     def __str__(self):
         return str(self.date)
-    
-class image(models.Model):
-    name = models.ForeignKey(Webpage)
-    date = models.DateField()
-    
-    def __str__(self):
-        return str(self.date)
