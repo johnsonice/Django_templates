@@ -98,4 +98,3 @@ class UserProfileViewSet(viewsets.ModelViewSet):
     """Handles creates, createing and updateing profiles. """
     serializer_class = serializers.UserProfileSerializer
     queryset = models.UserProfile.objects.all()
-    
