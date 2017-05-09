@@ -3,6 +3,7 @@ django-admin startproject main
 
 ## to run django server 
 python manage.py runserver
+python manage.py runserver 0.0.0.0:8080
 
 ## create first django application 
 python manage.py startapp restapi_yolo
