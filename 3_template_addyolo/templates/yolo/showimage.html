@@ -8,21 +8,22 @@
 
     </head>
     <body>
-       
+
         <div class="container">
             <h1>Upload Image!</h1>
             <form method="POST" enctype='multipart/form-data'>
                 {% csrf_token %}
-                {{form.as_p}}   
+                {{form.as_p}}
                 <input type="submit" class="btn btn-primary" value="Submit">
             </form>
             <div class="container">
                 <p>Input image</p>
-                <img src="{% static "images/in/test.jpg"%}" alt="image not loaded">
+                <img src="{% static "images/in/test.jpg"%}" height=50% width=50% alt="image not loaded">
             </div>
             <div class="container">
                 <p>Output Image</p>
-                <img src="{% static "images/out/test.jpg"%}" alt="image not loaded">
+                <img src="{% static "images/out/test.jpg"%}" height=50% width=50% alt="image not loaded">
+                <p>{{result}}</p>
             </div>
         </div>
     </body>
